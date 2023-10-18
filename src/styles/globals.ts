@@ -1,11 +1,15 @@
+import { createGlobalStyle } from 'styled-components';
+import colors from './colors'
+
+export const GlobalStyles = createGlobalStyle`
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Quicksand, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #161616;
+  color: ${colors.primary};
+  background: ${colors.background};
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,3 +23,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+`;
+
+export default GlobalStyles;
