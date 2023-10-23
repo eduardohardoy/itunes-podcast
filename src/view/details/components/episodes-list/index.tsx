@@ -73,7 +73,7 @@ const EpisodesList = ({ episodes, onEpisodeClick }: IEpisodesListProps) => {
                 title={episode.trackName}
               />
             </Cell>
-            <Cell maxLines={2}>{episode.description}</Cell>
+            <Cell $maxLines>{episode.description}</Cell>
             <Cell $textAlign="right">{formatDate(episode.releaseDate)}</Cell>
             <Cell $textAlign="right">
               {formatIntervalToDuration(episode.trackTimeMillis)}

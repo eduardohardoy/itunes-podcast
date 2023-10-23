@@ -21,24 +21,22 @@ export const Row = styled.tr`
 export const Cell = styled.td<ICellProps>`
   color: #5b5b5b;
 
-  text-align: ${props =>
-    props.$textAlign || 'center'};
+  text-align: ${(props) => props.$textAlign || "center"};
 
-  cursor: ${props =>
-      props.$changeCursor || 'default'};
+  cursor: ${(props) => props.$changeCursor || "default"};
 
-  ${({ maxLines }) =>
-    maxLines
+  ${(props) =>
+    props.$maxLines
       ? `
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* number of lines to show */
-    display: -webkit-box;
-    line-clamp: 2;
-    margin: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  `
-      : ""}
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            line-clamp: 2;
+            margin: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          `
+      : ""};
 `;
 
 export const TableHead = styled.thead``;
