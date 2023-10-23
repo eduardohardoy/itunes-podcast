@@ -11,5 +11,5 @@ export const Container = styled.div`
 
 export const Details = styled.div`
   display: flex;
-  min-width: 460px;
+  width: 500px;
 `;
