@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ICellProps {
-  isClickable?: boolean;
+  changeCursor?: "pointer" | "default";
   maxLines?: number;
   textAlign?: "center" | "left" | "right";
   flex?: number;
@@ -21,19 +21,11 @@ export const Row = styled.tr`
 export const Cell = styled.td<ICellProps>`
   color: #5b5b5b;
 
-  ${(props) =>
-    props.textAlign
-      ? `
-    text-align: right;
-`
-      : ""}
+  text-align: ${props =>
+    props.$textAlign || 'center'};
 
-  ${(props) =>
-    props.isClickable
-      ? `
-    cursor: pointer;
-  `
-      : ""}
+  cursor: ${props =>
+      props.$changeCursor || 'default'};
 
   ${({ maxLines }) =>
     maxLines

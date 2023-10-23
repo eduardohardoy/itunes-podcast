@@ -34,7 +34,7 @@ const PodcastsList = ({
           <Cell>{index}</Cell>
           <Cell
             flex={1}
-            isClickable
+            $changeCursor="pointer"
             onClick={() => onNavigateToPodcast(podcast)}
           >
             <Thumbnail

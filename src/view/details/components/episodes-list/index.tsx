@@ -74,8 +74,8 @@ const EpisodesList = ({ episodes, onEpisodeClick }: IEpisodesListProps) => {
               />
             </Cell>
             <Cell maxLines={2}>{episode.description}</Cell>
-            <Cell textAlign="right">{formatDate(episode.releaseDate)}</Cell>
-            <Cell textAlign="right">
+            <Cell $textAlign="right">{formatDate(episode.releaseDate)}</Cell>
+            <Cell $textAlign="right">
               {formatIntervalToDuration(episode.trackTimeMillis)}
             </Cell>
           </Row>
