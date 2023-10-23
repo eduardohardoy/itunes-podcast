@@ -1,5 +1,18 @@
-import LoadingOverlay from "react-loading-overlay";
+import { SpinnerContainer, StyledSpinner } from "./styled";
 
-const Spinner = () => <LoadingOverlay active spinner />;
+const Spinner = () => (
+  <SpinnerContainer>
+    <StyledSpinner viewBox="0 0 50 50">
+      <circle
+        className="path"
+        cx="25"
+        cy="25"
+        r="20"
+        fill="none"
+        strokeWidth="4"
+      />
+    </StyledSpinner>
+  </SpinnerContainer>
+);
 
 export default Spinner;

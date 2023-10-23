@@ -32,7 +32,6 @@ export const Cell = styled.td<ICellProps>`
     props.isClickable
       ? `
     cursor: pointer;
-    text-decoration: underline;
   `
       : ""}
 

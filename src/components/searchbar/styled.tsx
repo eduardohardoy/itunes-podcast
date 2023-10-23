@@ -27,6 +27,7 @@ export const IconContainer = styled(RoundedContainer)`
 export const Input = styled.input`
   background-color: inherit;
   border: none;
+  outline: none;
   margin-left: 10px;
   padding: 10px;
   width: 100%;
