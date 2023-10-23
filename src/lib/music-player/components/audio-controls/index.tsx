@@ -6,9 +6,6 @@ interface IAudioControlsProps {
 }
 
 const AudioControlContainer = styled.div`
-flex: 1;
-flex-basis: 0;
-
 audio::-webkit-media-controls-panel {
   background-color: #1a1a1a;
 }

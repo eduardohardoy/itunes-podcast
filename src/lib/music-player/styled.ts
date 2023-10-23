@@ -11,6 +11,5 @@ export const Container = styled.div`
 
 export const Details = styled.div`
   display: flex;
-  flex: 2;
-  flex-basis: 0;
+  min-width: 460px;
 `;
