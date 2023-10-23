@@ -1,3 +1,4 @@
+import moment from "moment";
 import { useSelector, useDispatch } from "react-redux";
 import { HiOutlinePlay } from "react-icons/hi2";
 import { AiOutlinePause } from "react-icons/ai";
@@ -11,7 +12,7 @@ import {
   TableHead,
 } from "../../../../components/table";
 import Thumbnail from "../../../../components/thumbnail";
-import { formatDate, formatIntervalToDuration } from "../../../../utils/format";
+import { formatIntervalToDuration } from "../../../../utils/format";
 import {
   selectCurrentEpisodeId,
   selectIsPlaying,
@@ -74,7 +75,7 @@ const EpisodesList = ({ episodes, onEpisodeClick }: IEpisodesListProps) => {
               />
             </Cell>
             <Cell $maxLines>{episode.description}</Cell>
-            <Cell $textAlign="right">{formatDate(episode.releaseDate)}</Cell>
+            <Cell $textAlign="right">{moment(episode.releaseDate).utc().format('DD/MM/YYYY')}</Cell>
             <Cell $textAlign="right">
               {formatIntervalToDuration(episode.trackTimeMillis)}
             </Cell>

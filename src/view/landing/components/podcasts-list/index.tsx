@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+import moment from "moment";
 import { IPodcast } from "../../../../types/podcasts";
 import {
   Cell,
@@ -44,7 +44,7 @@ const PodcastsList = ({
             />
           </Cell>
           <Cell>{podcast.artistName}</Cell>
-          <Cell>{format(new Date(podcast.releaseDate), "dd/mm/yyyy")}</Cell>
+          <Cell>{moment(podcast.releaseDate).utc().format('DD/MM/YYYY')}</Cell>
         </Row>
       ))}
     </TableBody>

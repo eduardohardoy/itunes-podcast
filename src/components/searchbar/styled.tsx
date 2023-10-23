@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SearchbarContainer = styled.div`
   display: flex;
+  margin-top: 30px;
 `;
 
 const RoundedContainer = styled.div`
