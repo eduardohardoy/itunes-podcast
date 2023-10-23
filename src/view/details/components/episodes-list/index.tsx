@@ -28,6 +28,8 @@ const EpisodesList = ({ episodes, onEpisodeClick }: IEpisodesListProps) => {
   const currentEpisodeId = useSelector(selectCurrentEpisodeId);
   const isPlayingPlaylist = useSelector(selectIsPlaying);
 
+  const audioElement = document.querySelector("audio");
+
   return (
     <Table>
       <TableHead>
@@ -45,17 +47,21 @@ const EpisodesList = ({ episodes, onEpisodeClick }: IEpisodesListProps) => {
             <Cell>
               {currentEpisodeId === episode.trackId && isPlayingPlaylist ? (
                 <AiOutlinePause
+                  fill="white"
                   cursor="pointer"
                   onClick={() => {
                     dispatch(setIsPlaying(false));
+                    audioElement?.pause();
                   }}
                 />
               ) : (
                 <HiOutlinePlay
+                  fill="white"
                   cursor="pointer"
                   onClick={() => {
                     dispatch(setIsPlaying(true));
                     onEpisodeClick(episode.trackId);
+                    audioElement?.play();
                   }}
                 />
               )}

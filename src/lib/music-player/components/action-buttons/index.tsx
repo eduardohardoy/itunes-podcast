@@ -25,17 +25,17 @@ const ActionButtons = ({
   onReplay,
 }: IActionButtonProps) => (
   <Container>
-    <MdOutlineSkipPrevious size={24} onClick={onPrev} />
+    <MdOutlineSkipPrevious size={24} onClick={onPrev} cursor="pointer"/>
     <Button>
       {isPlaying ? (
-        <AiOutlinePause fill="white" size={24} onClick={onPause} />
+        <AiOutlinePause fill="white" size={24} onClick={onPause} cursor="pointer"/>
       ) : (
-        <HiOutlinePlay fill="white" size={24} onClick={onPlay} />
+        <HiOutlinePlay fill="white" size={24} onClick={onPlay} cursor="pointer"/>
       )}
     </Button>
 
-    <MdOutlineSkipNext size={24} onClick={onNext} />
-    <MdReplay size={24} onClick={onReplay} />
+    <MdOutlineSkipNext size={24} onClick={onNext} cursor="pointer"/>
+    <MdReplay size={24} onClick={onReplay} cursor="pointer"/>
   </Container>
 );
 

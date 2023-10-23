@@ -6,7 +6,6 @@ export const GlobalStyles = createGlobalStyle`
   font-family: Quicksand, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: ${colors.primary};
   background: ${colors.background};
@@ -16,6 +15,11 @@ export const GlobalStyles = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {

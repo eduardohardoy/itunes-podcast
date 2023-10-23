@@ -6,6 +6,12 @@ interface IAudioControlsProps {
 }
 
 const AudioControlContainer = styled.div`
+flex: 1;
+flex-basis: 0;
+
+audio::-webkit-media-controls-panel {
+  background-color: #1a1a1a;
+}
   audio::-webkit-media-controls-play-button {
     display: none;
   }
@@ -14,19 +20,6 @@ const AudioControlContainer = styled.div`
     display: none;
   }
 
-  audio::-webkit-media-controls-current-time-display {
-    order: 0;
-  }
-
-  audio::-webkit-media-controls-timeline-container {
-    order: 1;
-  }
-  audio::-webkit-media-controls-time-remaining-display {
-    order: 2;
-  }
-  audio::-webkit-media-controls-volume-slider-container {
-    order: 3;
-  }
 `;
 
 const AudioControls = ({ episodeUrl }: IAudioControlsProps) => {
