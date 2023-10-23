@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Landing from "../views/landing";
-import Details from "../views/details";
+import Landing from "../view/landing";
+import Details from "../view/details";
 
 const AppRouter = () => {
   const router = createBrowserRouter([

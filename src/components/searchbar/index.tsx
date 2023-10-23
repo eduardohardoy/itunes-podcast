@@ -10,12 +10,14 @@ import { useDebounce } from "../../custom-hooks/use-debounce";
 
 interface SearchbarProps {
   canNavigateBack?: boolean;
+  disabled?: boolean;
   onChange: (value: string) => void;
   onNavigateBack?: () => void;
 }
 
 const Searchbar: React.FC<SearchbarProps> = ({
   canNavigateBack = false,
+  disabled,
   onChange,
   onNavigateBack,
 }) => {
@@ -44,7 +46,7 @@ const Searchbar: React.FC<SearchbarProps> = ({
       )}
       <InputContainer>
         <FaSearch color="white" cursor="pointer" />
-        <Input onChange={handleInputChange} />
+        <Input disabled={disabled} onChange={handleInputChange} />
       </InputContainer>
     </SearchbarContainer>
   );

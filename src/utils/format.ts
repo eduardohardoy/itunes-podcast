@@ -1,6 +1,8 @@
 import { intervalToDuration, format } from "date-fns";
 
 export const formatIntervalToDuration = (milliseconds: string) => {
+  if (!milliseconds) return "00:00";
+
   const { hours, minutes, seconds } = intervalToDuration({
     start: 0,
     end: parseInt(milliseconds),
@@ -18,4 +20,4 @@ export const formatIntervalToDuration = (milliseconds: string) => {
 };
 
 export const formatDate = (date: string) =>
-  format(new Date(date), "mm/dd/yyyy");
+  format(new Date(date), "MM/dd/yyyy");

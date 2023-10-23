@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-areas: "image title" "image description";
-  width: 200px;
+  display: flex;
+  width: 300px;
 `;
 
 export const Image = styled.img`
@@ -15,18 +14,26 @@ export const Image = styled.img`
 `;
 
 const TruncatedText = styled.div`
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 `;
 
+export const TitlesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+`;
+
 export const Title = styled(TruncatedText)`
-  grid-area: title;
+  color: #ffffff;
   font-size: 16px;
+  grid-area: title;
   line-height: 20px;
 `;
 
 export const Description = styled(TruncatedText)`
-  grid-area: description;
   font-size: 14px;
+  grid-area: description;
 `;

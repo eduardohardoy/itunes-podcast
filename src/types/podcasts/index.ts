@@ -1,28 +1,31 @@
 export interface IPodcast {
-    artistName: string;
-    artworkUrl60: string; // imagen
-    trackViewUrl: string; // url with related content
-    trackName: string;
-    collectionName: string;
-    collectionId: number | string;
-    releaseDate: string;
-  }
+  artistName: string;
+  artworkUrl60: string;
+  artworkUrl600: string;
+  collectionId: number | string;
+  collectionName: string;
+  releaseDate: string;
+  trackName: string;
+  trackViewUrl: string;
+}
 
-  export interface IPodcastEpisode {
-    trackName: string;
-    trackTimeMillis: string;
-    releaseDate: string;
-    description: string;
-    artworkUrl60: string;
-    collectionName: string;
-  }
+export interface IPodcastEpisode {
+  artworkUrl60: string;
+  collectionName: string;
+  description: string;
+  episodeUrl: string;
+  releaseDate: string;
+  trackId: number;
+  trackName: string;
+  trackTimeMillis: string;
+}
 
-  export interface IPodcastsData {
-    resultsCount: number;
-    results: IPodcast[];
-  }
-  
-  export interface IPodcastsEpisodesData {
-    resultsCount: number;
-    results: IPodcastEpisode[];
-  }
+export interface IPodcastsData {
+  results: IPodcast[];
+  resultsCount: number;
+}
+
+export interface IPodcastsEpisodesData {
+  results: IPodcastEpisode[];
+  resultsCount: number;
+}

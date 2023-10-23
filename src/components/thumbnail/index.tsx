@@ -1,16 +1,24 @@
-import { Container, Title, Image, Description } from "./styled";
+import {
+  Container,
+  Description,
+  Image,
+  Title,
+  TitlesContainer,
+} from "./styled";
 
 interface IThumbnailProps {
+  description: string;
   imageSrc: string;
   title: string;
-  description: string;
 }
 
-const Thumbnail = ({ imageSrc, title, description }: IThumbnailProps) => (
+const Thumbnail = ({ description, imageSrc, title }: IThumbnailProps) => (
   <Container>
     <Image src={imageSrc} />
-    <Title>{title}</Title>
-    <Description>{description}</Description>
+    <TitlesContainer>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+    </TitlesContainer>
   </Container>
 );
 
